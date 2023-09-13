@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "7788b1b6-883b-4812-8725-a2ea8133af80",
+		"name": "userManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25445689"
+	},
+	"item": [
+		{
+			"name": "getAllCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/allCustomers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"allCustomers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/allCustomers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"allCustomers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "404"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"194-Jm62BDl5UKYEYg3rA6IkRr8gd+k\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:07:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Customer_ID\": \"ACqNKIeOs01VyLngjgDK\",\n        \"PhoneNumber\": \"0758953720\",\n        \"email\": \"shobisha@email.com\",\n        \"Name\": \"shobisha\",\n        \"Address\": \"Moratuwa\"\n    },\n    {\n        \"Address\": \"123 Main Street\",\n        \"Customer_ID\": \"Y7zzgcrgzkPgyirO1gP7\",\n        \"PhoneNumber\": \"123-456-7890\",\n        \"email\": \"nusky@email.com\",\n        \"Name\": \"nusky\"\n    },\n    {\n        \"Address\": \"153,Street\",\n        \"Customer_ID\": \"tTZB23HTVLrJ0vQiUjaX\",\n        \"PhoneNumber\": \"0758953720\",\n        \"email\": \"kasuni@email.com\",\n        \"Name\": \"amitha\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getcustomerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/customer/BhByM7E3cpTJGRKZpIyi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customer",
+						"BhByM7E3cpTJGRKZpIyi"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/customer/BhByM7E3cpTJGRKZpIyi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customer",
+								"BhByM7E3cpTJGRKZpIyi"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b8-s8UB7d//V5tF+suWUjZE5bFawkE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 12:56:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customerData\": {\n        \"Address\": \"153,Street\",\n        \"Customer_ID\": \"BhByM7E3cpTJGRKZpIyi\",\n        \"PhoneNumber\": \"0758953720\",\n        \"email\": \"Nethmi@email.com\",\n        \"Name\": \"Nethmia\"\n    },\n    \"message\": \"successfully retrieved\"\n}"
+				}
+			]
+		},
+		{
+			"name": "createCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nusky@email.com\",\r\n    \"Name\": \"nusky\",\r\n    \"PhoneNumber\": \"123-456-7890\",\r\n    \"Address\": \"123 Main Street\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/createCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"createCustomer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nusky@email.com\",\r\n    \"Name\": \"nusky\",\r\n    \"PhoneNumber\": \"123-456-7890\",\r\n    \"Address\": \"123 Main Street\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/createCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"createCustomer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-EQRUDkAUp7gLJFzy6PVUtw3LlV4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:02:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Customer added successfully\",\n    \"Customer_ID\": \"1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "updateCustomer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"Address\": \"153,Street\",\r\n        \"Customer_ID\": \"tTZB23HTVLrJ0vQiUjaX\",\r\n        \"PhoneNumber\": \"0758953720\",\r\n        \"email\": \"amitha@email.com\",\r\n        \"Name\": \"amitha\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/updateCustomer/tTZB23HTVLrJ0vQiUjaX",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"updateCustomer",
+						"tTZB23HTVLrJ0vQiUjaX"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"Address\": \"153,Street\",\r\n        \"Customer_ID\": \"tTZB23HTVLrJ0vQiUjaX\",\r\n        \"PhoneNumber\": \"0758953720\",\r\n        \"email\": \"amitha@email.com\",\r\n        \"Name\": \"amitha\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/updateCustomer/tTZB23HTVLrJ0vQiUjaX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"updateCustomer",
+								"tTZB23HTVLrJ0vQiUjaX"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-mVmG7IwcYwf5w6ScXscFME2A5qI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:04:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Customer data updated successfully"
+				}
+			]
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/deleteCustomer/BhByM7E3cpTJGRKZpIyi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"deleteCustomer",
+						"BhByM7E3cpTJGRKZpIyi"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/deleteCustomer/BhByM7E3cpTJGRKZpIyi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"deleteCustomer",
+								"BhByM7E3cpTJGRKZpIyi"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"48-310j5V9KXPF8m5Lh80GcLGfoX38\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 13:07:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Customer with ID BhByM7E3cpTJGRKZpIyi deleted successfully\"\n}"
+				}
+			]
+		}
+	]
+}
